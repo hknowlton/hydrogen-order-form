@@ -298,6 +298,18 @@ function DesktopHeader({
               {item.title}
             </Link>
           ))}
+          {/* If user has b2b enabled */}
+          <Link
+            key="bulk-order-form"
+            to="/bulk-order"
+            target="/bulk-order"
+            prefetch="intent"
+            className={({isActive}) =>
+              isActive ? 'pb-1 border-b -mb-px' : 'pb-1'
+            }
+          >
+            Bulk Order
+          </Link>
         </nav>
       </div>
       <div className="flex items-center gap-1">
